@@ -34,13 +34,23 @@ a {
   color: #ffffff; }
 
 nav {
+  margin: 0;
   position: fixed;
   top: 0;
   width: 100%;
+  max-width: 1400px;
   height: 110px;
   line-height: 20px;
   z-index: 10;
   background-color: rgba(21, 26, 39, 0.4); }
+  @media only screen and (min-width : 1400px)
+{
+  nav 
+  {
+    left: 50%;
+    margin-left: -700px;
+  }
+}
 
 @media only screen and (max-width : 768px)
 {
@@ -87,7 +97,8 @@ nav {
 
 header {
   position: relative;
-  margin-top: 0;
+  margin: 0 auto;
+  max-width: 1400px;
   height: 100vh;
   background-image: url("../img/bg.jpg");
   background-size: cover;
@@ -130,6 +141,8 @@ header {
 }
 
 .perfection {
+  margin: 0 auto;
+  max-width: 1400px;
   padding: 50px 0;
 }
 
@@ -299,7 +312,8 @@ header {
   border-bottom: 1px solid #d89b64; }
 
 .details {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1400px;
   height: 75vh;
   position: relative;
   background-image: url("../img/details.jpg");
@@ -339,7 +353,9 @@ header {
   letter-spacing: 2px; }
 
 .reach {
+  margin: 0 auto;
   padding: 50px 0;
+  max-width: 1400px;
   }
 
 .container_info {
@@ -422,7 +438,8 @@ header {
   color: #171e2c; }
 
 footer {
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
+  max-width: 1400px;
   position: relative;
   text-align: center; }
 
@@ -479,10 +496,13 @@ footer {
   padding: 0 7px;
   display: inline-block; 
 }
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1024px) {
   header {
     height: 40vh;
   }
+}
+
+@media only screen and (max-width: 850px) {
     .container_info {
       height: auto;
       -webkit-flex-direction: column;
@@ -498,6 +518,12 @@ footer {
       height: auto;
       width: 60%;
     }
+    .bg_text {
+       font-size: 180px;
+    }
+    .section_title{
+      margin-top: -120px;
+    }
   }
   @media only screen and (max-width: 768px) {
     .top_menu {
@@ -507,12 +533,6 @@ footer {
       float: none;
       clear: both;
     }
-    .bg_text {
-       font-size: 180px;
-    }
-    .section_title{
-      margin-top: -120px;
-    }
     .menu_btn {
       margin: -30px -50px 0;
     }
@@ -521,9 +541,6 @@ footer {
     }
 }
 @media only screen and (max-width: 600px) {
-    .bg_text {
-       font-size: 80px;
-    }
     .container_flex {
       margin: 0;
     }
@@ -535,6 +552,9 @@ footer {
     }
     .container_info {
       margin-top: 0;
+    }
+    .bg_text {
+       font-size: 80px;
     }
 }
 @media only screen and (max-width: 500px) {
